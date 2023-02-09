@@ -4,7 +4,7 @@
       Stored Resources
     </base-button>
 
-    <base-button @click="selectedTab('add-resource')">
+    <base-button @click="setSelectedTab('add-resource')">
       Add Resources
     </base-button>
   </base-card>
