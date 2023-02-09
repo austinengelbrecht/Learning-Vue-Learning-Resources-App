@@ -1,5 +1,5 @@
 <template>
-  <div class=""></div>
+  <div @click="$emit('close')"></div>
 
   <dialog open>
     <header>
@@ -13,7 +13,9 @@
     </section>
 
     <menu>
-      <slot name="actions"></slot>
+      <slot name="actions">
+        <base-button @click="$emit('close')">Close</base-button>
+      </slot>
     </menu>
   </dialog>
 </template>
@@ -26,6 +28,7 @@ export default {
       required: false,
     },
   },
+  emits: ['close'],
 };
 </script>
 
